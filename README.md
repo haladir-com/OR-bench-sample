@@ -6,6 +6,17 @@ A curated sample of operations research optimization tasks for evaluating LLM co
 
 This dataset contains expert-level OR tasks across 10 classic operations research domains, each requiring models to generate feasible solutions that satisfy complex interacting constraints. A sample is included.
 
+## Results
+
+| Model | Feasibility% | Optimality% | % Optimal |
+|-------|-------------|-------------|-----------|
+| openai/gpt-5.2-pro | 65.3% | 95.2% | 30.7% |
+| openai/gpt-5.2 | 64.0% | 93.8% | 21.0% |
+| gemini-3-pro-preview | 44.5% | 94.8% | 8.5% |
+| openai/o4-mini | 50.5% | 89.0% | 8.5% |
+| anthropic/claude-opus-4.6 | 49.0% | 96.0% | 21.5% |
+| anthropic/claude-opus-4.5 | 50.5% | 94.0% | 12.5% |
+
 ## Domains
 
 | Domain | Description |
@@ -160,14 +171,3 @@ A solution is considered **optimal** if:
 **Reporting**: Both feasibility and optimality rates are calculated as a percentage of total tasks (not optimal/feasible). A task that is infeasible cannot be optimal.
 
 Ground-truth solutions are computed using OR-Tools solvers (SCIP for MIP, CP-SAT for scheduling).
-
-## Results
-
-| Model | Feasibility% | Optimality% | % Optimal |
-|-------|-------------|-------------|-----------|
-| openai/gpt-5.2-pro | 65.3% | 95.2% | 30.7% |
-| openai/gpt-5.2 | 64.0% | 93.8% | 21.0% |
-| gemini-3-pro-preview | 44.5% | 94.8% | 8.5% |
-| openai/o4-mini | 50.5% | 89.0% | 8.5% |
-| anthropic/claude-opus-4.6 | 49.0% | 96.0% | 21.5% |
-| anthropic/claude-opus-4.5 | 50.5% | 94.0% | 12.5% |
